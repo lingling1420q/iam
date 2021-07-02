@@ -73,6 +73,7 @@ go.clean:
 .PHONY: go.lint
 go.lint: tools.verify.golangci-lint
 	@echo "===========> Run golangci to lint source codes"
+	@echo "glangci-lint version: $(shell golangci-lint version)"
 	@golangci-lint run -c $(ROOT_DIR)/.golangci.yaml $(ROOT_DIR)/...
 
 .PHONY: go.test
