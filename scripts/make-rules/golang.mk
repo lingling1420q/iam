@@ -74,7 +74,7 @@ go.clean:
 go.lint: tools.verify.golangci-lint
 	@echo "===========> Run golangci to lint source codes"
 	@echo "glangci-lint version: $(shell golangci-lint version)"
-	@echo "1111111111111111: $(shell golangci-lint config path)"
+	@echo "1111111111111111: $(shell golangci-lint linters)"
 	@golangci-lint run -c $(ROOT_DIR)/.golangci.yaml $(ROOT_DIR)/...
 
 .PHONY: go.test
