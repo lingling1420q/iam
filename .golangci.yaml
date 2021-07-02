@@ -537,6 +537,7 @@ linters:
   # enable-all: true
   disable-all: true
   enable:
+    - typecheck
     - asciicheck
     - bodyclose
     - cyclop
@@ -620,10 +621,6 @@ issues:
     - linters:
       - wrapcheck
       path: (cmd/.*|pkg/.*)\.go
-
-    - linters:
-      - typecheck
-      path: (pkg/storage/.*)\.go
 
     - path: (cmd/.*|test/.*|tools/.*)\.go
       linters:
