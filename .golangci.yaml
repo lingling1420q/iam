@@ -537,69 +537,8 @@ linters:
   # enable-all: true
   disable-all: true
   enable:
-    - typecheck
     - asciicheck
     - bodyclose
-    - cyclop
-    - deadcode
-    - depguard
-    - dogsled
-    - dupl
-    - durationcheck
-    - errcheck
-    - errorlint
-    - exhaustive
-    - exhaustivestruct
-    - exportloopref
-    - forbidigo
-    - funlen
-    - gci
-    - gochecknoinits
-    - gocognit
-    - goconst
-    - gocyclo
-    - godot
-    - godox
-    - gofmt
-    - gofumpt
-    - goheader
-    - goimports
-    - gomoddirectives
-    - gomodguard
-    - goprintffuncname
-    - gosec
-    - gosimple
-    - govet
-    - ifshort
-    - importas
-    - ineffassign
-    - lll
-    - makezero
-    - misspell
-    - nakedret
-    - nestif
-    - nilerr
-    - nlreturn
-    - noctx
-    - nolintlint
-    - paralleltest
-    - prealloc
-    - predeclared
-    - promlinter
-    - revive
-    - rowserrcheck
-    - sqlclosecheck
-    - staticcheck
-    - structcheck
-    - stylecheck
-    - thelper
-    - tparallel
-    - unconvert
-    - unparam
-    - unused
-    - varcheck
-    - wastedassign
-    - whitespace
   fast: false
 
 issues:
@@ -621,6 +560,10 @@ issues:
     - linters:
       - wrapcheck
       path: (cmd/.*|pkg/.*)\.go
+
+    - linters:
+      - typecheck
+      path: (pkg/storage/.*)\.go
 
     - path: (cmd/.*|test/.*|tools/.*)\.go
       linters:
