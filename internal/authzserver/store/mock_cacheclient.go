@@ -41,11 +41,7 @@ func (m *MockCacheClient) EXPECT() *MockCacheClientMockRecorder {
 }
 
 // ListPolicies mocks base method.
-func (m *MockCacheClient) ListPolicies(
-	arg0 context.Context,
-	arg1 *v1.ListPoliciesRequest,
-	arg2 ...grpc.CallOption,
-) (*v1.ListPoliciesResponse, error) {
+func (m *MockCacheClient) ListPolicies(arg0 context.Context, arg1 *v1.ListPoliciesRequest, arg2 ...grpc.CallOption) (*v1.ListPoliciesResponse, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
 	for _, a := range arg2 {
@@ -61,19 +57,11 @@ func (m *MockCacheClient) ListPolicies(
 func (mr *MockCacheClientMockRecorder) ListPolicies(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
-	return mr.mock.ctrl.RecordCallWithMethodType(
-		mr.mock,
-		"ListPolicies",
-		reflect.TypeOf((*MockCacheClient)(nil).ListPolicies),
-		varargs...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPolicies", reflect.TypeOf((*MockCacheClient)(nil).ListPolicies), varargs...)
 }
 
 // ListSecrets mocks base method.
-func (m *MockCacheClient) ListSecrets(
-	arg0 context.Context,
-	arg1 *v1.ListSecretsRequest,
-	arg2 ...grpc.CallOption,
-) (*v1.ListSecretsResponse, error) {
+func (m *MockCacheClient) ListSecrets(arg0 context.Context, arg1 *v1.ListSecretsRequest, arg2 ...grpc.CallOption) (*v1.ListSecretsResponse, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
 	for _, a := range arg2 {
@@ -89,9 +77,5 @@ func (m *MockCacheClient) ListSecrets(
 func (mr *MockCacheClientMockRecorder) ListSecrets(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
-	return mr.mock.ctrl.RecordCallWithMethodType(
-		mr.mock,
-		"ListSecrets",
-		reflect.TypeOf((*MockCacheClient)(nil).ListSecrets),
-		varargs...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSecrets", reflect.TypeOf((*MockCacheClient)(nil).ListSecrets), varargs...)
 }

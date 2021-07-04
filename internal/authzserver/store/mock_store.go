@@ -51,11 +51,7 @@ func (m *MockStoreClient) GetPolicies() (map[string][]*ladon.DefaultPolicy, erro
 // GetPolicies indicates an expected call of GetPolicies.
 func (mr *MockStoreClientMockRecorder) GetPolicies() *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(
-		mr.mock,
-		"GetPolicies",
-		reflect.TypeOf((*MockStoreClient)(nil).GetPolicies),
-	)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetPolicies", reflect.TypeOf((*MockStoreClient)(nil).GetPolicies))
 }
 
 // GetSecrets mocks base method.
@@ -70,9 +66,5 @@ func (m *MockStoreClient) GetSecrets() (map[string]*v1.SecretInfo, error) {
 // GetSecrets indicates an expected call of GetSecrets.
 func (mr *MockStoreClientMockRecorder) GetSecrets() *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(
-		mr.mock,
-		"GetSecrets",
-		reflect.TypeOf((*MockStoreClient)(nil).GetSecrets),
-	)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSecrets", reflect.TypeOf((*MockStoreClient)(nil).GetSecrets))
 }

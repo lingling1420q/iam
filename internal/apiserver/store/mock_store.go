@@ -130,14 +130,7 @@ func (m *MockUserStore) Create(arg0 context.Context, arg1 *v1.User, arg2 v10.Cre
 // Create indicates an expected call of Create.
 func (mr *MockUserStoreMockRecorder) Create(arg0, arg1, arg2 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(
-		mr.mock,
-		"Create",
-		reflect.TypeOf((*MockUserStore)(nil).Create),
-		arg0,
-		arg1,
-		arg2,
-	)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Create", reflect.TypeOf((*MockUserStore)(nil).Create), arg0, arg1, arg2)
 }
 
 // Delete mocks base method.
@@ -151,14 +144,7 @@ func (m *MockUserStore) Delete(arg0 context.Context, arg1 string, arg2 v10.Delet
 // Delete indicates an expected call of Delete.
 func (mr *MockUserStoreMockRecorder) Delete(arg0, arg1, arg2 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(
-		mr.mock,
-		"Delete",
-		reflect.TypeOf((*MockUserStore)(nil).Delete),
-		arg0,
-		arg1,
-		arg2,
-	)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Delete", reflect.TypeOf((*MockUserStore)(nil).Delete), arg0, arg1, arg2)
 }
 
 // DeleteCollection mocks base method.
@@ -172,14 +158,7 @@ func (m *MockUserStore) DeleteCollection(arg0 context.Context, arg1 []string, ar
 // DeleteCollection indicates an expected call of DeleteCollection.
 func (mr *MockUserStoreMockRecorder) DeleteCollection(arg0, arg1, arg2 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(
-		mr.mock,
-		"DeleteCollection",
-		reflect.TypeOf((*MockUserStore)(nil).DeleteCollection),
-		arg0,
-		arg1,
-		arg2,
-	)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteCollection", reflect.TypeOf((*MockUserStore)(nil).DeleteCollection), arg0, arg1, arg2)
 }
 
 // Get mocks base method.
@@ -194,14 +173,7 @@ func (m *MockUserStore) Get(arg0 context.Context, arg1 string, arg2 v10.GetOptio
 // Get indicates an expected call of Get.
 func (mr *MockUserStoreMockRecorder) Get(arg0, arg1, arg2 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(
-		mr.mock,
-		"Get",
-		reflect.TypeOf((*MockUserStore)(nil).Get),
-		arg0,
-		arg1,
-		arg2,
-	)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Get", reflect.TypeOf((*MockUserStore)(nil).Get), arg0, arg1, arg2)
 }
 
 // List mocks base method.
@@ -216,13 +188,7 @@ func (m *MockUserStore) List(arg0 context.Context, arg1 v10.ListOptions) (*v1.Us
 // List indicates an expected call of List.
 func (mr *MockUserStoreMockRecorder) List(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(
-		mr.mock,
-		"List",
-		reflect.TypeOf((*MockUserStore)(nil).List),
-		arg0,
-		arg1,
-	)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "List", reflect.TypeOf((*MockUserStore)(nil).List), arg0, arg1)
 }
 
 // Update mocks base method.
@@ -236,14 +202,7 @@ func (m *MockUserStore) Update(arg0 context.Context, arg1 *v1.User, arg2 v10.Upd
 // Update indicates an expected call of Update.
 func (mr *MockUserStoreMockRecorder) Update(arg0, arg1, arg2 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(
-		mr.mock,
-		"Update",
-		reflect.TypeOf((*MockUserStore)(nil).Update),
-		arg0,
-		arg1,
-		arg2,
-	)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Update", reflect.TypeOf((*MockUserStore)(nil).Update), arg0, arg1, arg2)
 }
 
 // MockSecretStore is a mock of SecretStore interface.
@@ -280,14 +239,7 @@ func (m *MockSecretStore) Create(arg0 context.Context, arg1 *v1.Secret, arg2 v10
 // Create indicates an expected call of Create.
 func (mr *MockSecretStoreMockRecorder) Create(arg0, arg1, arg2 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(
-		mr.mock,
-		"Create",
-		reflect.TypeOf((*MockSecretStore)(nil).Create),
-		arg0,
-		arg1,
-		arg2,
-	)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Create", reflect.TypeOf((*MockSecretStore)(nil).Create), arg0, arg1, arg2)
 }
 
 // Delete mocks base method.
@@ -301,24 +253,11 @@ func (m *MockSecretStore) Delete(arg0 context.Context, arg1, arg2 string, arg3 v
 // Delete indicates an expected call of Delete.
 func (mr *MockSecretStoreMockRecorder) Delete(arg0, arg1, arg2, arg3 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(
-		mr.mock,
-		"Delete",
-		reflect.TypeOf((*MockSecretStore)(nil).Delete),
-		arg0,
-		arg1,
-		arg2,
-		arg3,
-	)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Delete", reflect.TypeOf((*MockSecretStore)(nil).Delete), arg0, arg1, arg2, arg3)
 }
 
 // DeleteCollection mocks base method.
-func (m *MockSecretStore) DeleteCollection(
-	arg0 context.Context,
-	arg1 string,
-	arg2 []string,
-	arg3 v10.DeleteOptions,
-) error {
+func (m *MockSecretStore) DeleteCollection(arg0 context.Context, arg1 string, arg2 []string, arg3 v10.DeleteOptions) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteCollection", arg0, arg1, arg2, arg3)
 	ret0, _ := ret[0].(error)
@@ -328,15 +267,7 @@ func (m *MockSecretStore) DeleteCollection(
 // DeleteCollection indicates an expected call of DeleteCollection.
 func (mr *MockSecretStoreMockRecorder) DeleteCollection(arg0, arg1, arg2, arg3 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(
-		mr.mock,
-		"DeleteCollection",
-		reflect.TypeOf((*MockSecretStore)(nil).DeleteCollection),
-		arg0,
-		arg1,
-		arg2,
-		arg3,
-	)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteCollection", reflect.TypeOf((*MockSecretStore)(nil).DeleteCollection), arg0, arg1, arg2, arg3)
 }
 
 // Get mocks base method.
@@ -351,15 +282,7 @@ func (m *MockSecretStore) Get(arg0 context.Context, arg1, arg2 string, arg3 v10.
 // Get indicates an expected call of Get.
 func (mr *MockSecretStoreMockRecorder) Get(arg0, arg1, arg2, arg3 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(
-		mr.mock,
-		"Get",
-		reflect.TypeOf((*MockSecretStore)(nil).Get),
-		arg0,
-		arg1,
-		arg2,
-		arg3,
-	)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Get", reflect.TypeOf((*MockSecretStore)(nil).Get), arg0, arg1, arg2, arg3)
 }
 
 // List mocks base method.
@@ -374,14 +297,7 @@ func (m *MockSecretStore) List(arg0 context.Context, arg1 string, arg2 v10.ListO
 // List indicates an expected call of List.
 func (mr *MockSecretStoreMockRecorder) List(arg0, arg1, arg2 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(
-		mr.mock,
-		"List",
-		reflect.TypeOf((*MockSecretStore)(nil).List),
-		arg0,
-		arg1,
-		arg2,
-	)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "List", reflect.TypeOf((*MockSecretStore)(nil).List), arg0, arg1, arg2)
 }
 
 // Update mocks base method.
@@ -395,14 +311,7 @@ func (m *MockSecretStore) Update(arg0 context.Context, arg1 *v1.Secret, arg2 v10
 // Update indicates an expected call of Update.
 func (mr *MockSecretStoreMockRecorder) Update(arg0, arg1, arg2 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(
-		mr.mock,
-		"Update",
-		reflect.TypeOf((*MockSecretStore)(nil).Update),
-		arg0,
-		arg1,
-		arg2,
-	)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Update", reflect.TypeOf((*MockSecretStore)(nil).Update), arg0, arg1, arg2)
 }
 
 // MockPolicyStore is a mock of PolicyStore interface.
@@ -439,14 +348,7 @@ func (m *MockPolicyStore) Create(arg0 context.Context, arg1 *v1.Policy, arg2 v10
 // Create indicates an expected call of Create.
 func (mr *MockPolicyStoreMockRecorder) Create(arg0, arg1, arg2 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(
-		mr.mock,
-		"Create",
-		reflect.TypeOf((*MockPolicyStore)(nil).Create),
-		arg0,
-		arg1,
-		arg2,
-	)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Create", reflect.TypeOf((*MockPolicyStore)(nil).Create), arg0, arg1, arg2)
 }
 
 // Delete mocks base method.
@@ -460,24 +362,11 @@ func (m *MockPolicyStore) Delete(arg0 context.Context, arg1, arg2 string, arg3 v
 // Delete indicates an expected call of Delete.
 func (mr *MockPolicyStoreMockRecorder) Delete(arg0, arg1, arg2, arg3 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(
-		mr.mock,
-		"Delete",
-		reflect.TypeOf((*MockPolicyStore)(nil).Delete),
-		arg0,
-		arg1,
-		arg2,
-		arg3,
-	)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Delete", reflect.TypeOf((*MockPolicyStore)(nil).Delete), arg0, arg1, arg2, arg3)
 }
 
 // DeleteCollection mocks base method.
-func (m *MockPolicyStore) DeleteCollection(
-	arg0 context.Context,
-	arg1 string,
-	arg2 []string,
-	arg3 v10.DeleteOptions,
-) error {
+func (m *MockPolicyStore) DeleteCollection(arg0 context.Context, arg1 string, arg2 []string, arg3 v10.DeleteOptions) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteCollection", arg0, arg1, arg2, arg3)
 	ret0, _ := ret[0].(error)
@@ -487,15 +376,7 @@ func (m *MockPolicyStore) DeleteCollection(
 // DeleteCollection indicates an expected call of DeleteCollection.
 func (mr *MockPolicyStoreMockRecorder) DeleteCollection(arg0, arg1, arg2, arg3 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(
-		mr.mock,
-		"DeleteCollection",
-		reflect.TypeOf((*MockPolicyStore)(nil).DeleteCollection),
-		arg0,
-		arg1,
-		arg2,
-		arg3,
-	)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteCollection", reflect.TypeOf((*MockPolicyStore)(nil).DeleteCollection), arg0, arg1, arg2, arg3)
 }
 
 // Get mocks base method.
@@ -510,15 +391,7 @@ func (m *MockPolicyStore) Get(arg0 context.Context, arg1, arg2 string, arg3 v10.
 // Get indicates an expected call of Get.
 func (mr *MockPolicyStoreMockRecorder) Get(arg0, arg1, arg2, arg3 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(
-		mr.mock,
-		"Get",
-		reflect.TypeOf((*MockPolicyStore)(nil).Get),
-		arg0,
-		arg1,
-		arg2,
-		arg3,
-	)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Get", reflect.TypeOf((*MockPolicyStore)(nil).Get), arg0, arg1, arg2, arg3)
 }
 
 // List mocks base method.
@@ -533,14 +406,7 @@ func (m *MockPolicyStore) List(arg0 context.Context, arg1 string, arg2 v10.ListO
 // List indicates an expected call of List.
 func (mr *MockPolicyStoreMockRecorder) List(arg0, arg1, arg2 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(
-		mr.mock,
-		"List",
-		reflect.TypeOf((*MockPolicyStore)(nil).List),
-		arg0,
-		arg1,
-		arg2,
-	)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "List", reflect.TypeOf((*MockPolicyStore)(nil).List), arg0, arg1, arg2)
 }
 
 // Update mocks base method.
@@ -554,12 +420,5 @@ func (m *MockPolicyStore) Update(arg0 context.Context, arg1 *v1.Policy, arg2 v10
 // Update indicates an expected call of Update.
 func (mr *MockPolicyStoreMockRecorder) Update(arg0, arg1, arg2 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(
-		mr.mock,
-		"Update",
-		reflect.TypeOf((*MockPolicyStore)(nil).Update),
-		arg0,
-		arg1,
-		arg2,
-	)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Update", reflect.TypeOf((*MockPolicyStore)(nil).Update), arg0, arg1, arg2)
 }

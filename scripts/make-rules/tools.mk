@@ -6,10 +6,9 @@
 # Makefile helper functions for tools
 #
 
-DEP_TOOLS ?= swagger mockgen gotests gsemver golines go-junit-report git-chglog github-release coscmd go-mod-outdated golangci-lint protoc-gen-go cfssl addlicense goimports
-OTHER_TOOLS ?= depth go-callvis gothanks richgo rts
+TOOLS ?=$(BLOCKER_TOOLS) $(CRITICAL_TOOLS) $(TRIVIAL_TOOLS))
 
-tools.install: $(addprefix tools.install., $(DEP_TOOLS), ${OTHER_TOOLS})
+tools.install: $(addprefix tools.install., $(TOOLS))
 tools.install.%:
 	@echo "===========> Installing $*"
 	@$(MAKE) install.$*
@@ -23,7 +22,7 @@ install.swagger:
 
 .PHONY: install.golangci-lint
 install.golangci-lint:
-	@$(GO) get -u github.com/golangci/golangci-lint/cmd/golangci-lint
+	@$(GO) get github.com/golangci/golangci-lint/cmd/golangci-lint@v1.41.1
 	@golangci-lint completion bash > $(HOME)/.golangci-lint.bash
 	@if ! grep -q .golangci-lint.bash $(HOME)/.bashrc; then echo "source \$$HOME/.golangci-lint.bash" >> $(HOME)/.bashrc; fi
 
@@ -98,3 +97,7 @@ install.richgo:
 .PHONY: install.rts
 install.rts:
 	@$(GO) get -u github.com/galeone/rts/cmd/rts
+
+.PHONY: install.codegen
+install.codegen:
+	@$(GO) install ${ROOT_DIR}/tools/codegen/codegen.go

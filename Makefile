@@ -6,7 +6,8 @@
 .DEFAULT_GOAL := all
 
 .PHONY: all
-all: gen verify-copyright format lint cover build
+#all: gen add-copyright format lint cover build
+all: lint 
 
 # ==============================================================================
 # Build options
@@ -17,7 +18,7 @@ VERSION_PACKAGE=github.com/marmotedu/component-base/pkg/version
 # ==============================================================================
 # Includes
 
-include scripts/make-rules/common.mk
+include scripts/make-rules/common.mk # make sure include common.mk at the first include line
 include scripts/make-rules/golang.mk
 include scripts/make-rules/image.mk
 include scripts/make-rules/deploy.mk
@@ -92,11 +93,12 @@ deploy:
 ## clean: Remove all files that are created by building.
 .PHONY: clean
 clean:
-	@$(MAKE) go.clean
+	@echo "===========> Cleaning all build output"
+	@-rm -vrf $(OUTPUT_DIR)
 
 ## lint: Check syntax and styling of go sources.
 .PHONY: lint
-lint: format
+lint:
 	@$(MAKE) go.lint
 
 ## test: Run unit test.
@@ -125,6 +127,7 @@ format: tools.verify.golines tools.verify.goimports
 	@$(FIND) -type f -name '*.go' | $(XARGS) gofmt -s -w
 	@$(FIND) -type f -name '*.go' | $(XARGS) goimports -w -local $(ROOT_PACKAGE)
 	@$(FIND) -type f -name '*.go' | $(XARGS) golines -w --max-len=120 --reformat-tags --shorten-comments --ignore-generated .
+	@$(GO) mod edit -fmt
 
 ## verify-copyright: Verify the boilerplate headers for all files.
 .PHONY: verify-copyright
